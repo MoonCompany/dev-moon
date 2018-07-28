@@ -1,0 +1,37 @@
+﻿@model AplicacionASPCore.Models.RespuestaInvitado
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+</head>
+<body>
+    <form asp-action="Rsvp" method="post">
+        <p>
+            <label asp-for="Nombre">Nombre:</label>
+            <input asp-for="Nombre" />
+        </p>
+        <p>
+            <label asp-for="Email">Your email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Telefono">Your phone:</label>
+            <input asp-for="Telefono" />
+        </p>
+        <p>
+            <label>Asistirá?</label>
+            <select asp-for="Asistira">
+                <option value="">Elige una opción</option>
+                <option value="true">Si</option>
+                <option value="false">No</option>
+            </select>
+        </p>
+        <button type="submit">Enviar Respuesta</button>
+    </form>
+</body>
+</html>

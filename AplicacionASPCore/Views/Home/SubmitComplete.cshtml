@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <p>
+        <h1>Gracias, @Model.Nombre!</h1>
+        @if (Model.Asistira == true)
+        {
+            @:Nos vemos el dia de la fiesta, gracias por confirmar!
+        }
+        else
+        {
+            @:La próxima sera :)
+        }
+    </p>
+    <p>Click <a asp-action="ListaInvitados">aquí</a> para ver quien viene.</p>
+</body>
+</html>

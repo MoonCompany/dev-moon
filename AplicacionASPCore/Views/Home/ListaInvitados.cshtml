@@ -1,0 +1,35 @@
+﻿@model IEnumerable<AplicacionASPCore.Models.RespuestaInvitado>
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmados</title>
+</head>
+<body>
+    <h2>Lista de personas que asistirán a la fiesta:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (AplicacionASPCore.Models.RespuestaInvitado r in Model)
+            {
+                <tr>
+                    <td>@r.Nombre</td>
+                    <td>@r.Email</td>
+                    <td>@r.Telefono</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
