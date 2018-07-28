@@ -26,9 +26,14 @@ namespace AplicacionASPCore.Controllers
         [HttpPost]
         public ViewResult Rsvp(RespuestaInvitado respuestaInvitado)
         {
-            Repository.AddResponse(respuestaInvitado);
+            if (ModelState.IsValid){
+                Repository.AddResponse(respuestaInvitado);
 
-            return View("SubmitComplete", respuestaInvitado);
+                return View("SubmitComplete", respuestaInvitado);
+            } else
+            {
+                return View();
+            }
         }
 
         [HttpGet]
