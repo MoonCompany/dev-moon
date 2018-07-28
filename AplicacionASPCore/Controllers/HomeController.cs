@@ -26,6 +26,7 @@ namespace AplicacionASPCore.Controllers
         [HttpPost]
         public ViewResult Rsvp(RespuestaInvitado respuestaInvitado)
         {
+
             Repository.AddResponse(respuestaInvitado);
 
             return View("SubmitComplete", respuestaInvitado);
